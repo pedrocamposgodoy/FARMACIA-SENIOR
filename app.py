@@ -100,7 +100,7 @@ if vista_actual == "👴 Pantalla Senior":
     st.title(f"📅 Mis Medicamentos - {datetime.now().strftime('%d/%m/%Y')}")
     st.write("") # Espaciador
     
-    if no st.session_state.db:
+    if not st.session_state.db:
         st.info("No hay medicamentos programados para hoy.")
         
     for i, med in enumerate(st.session_state.db):
